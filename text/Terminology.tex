@@ -1,0 +1,29 @@
+% First parameter can be changed eg to "Glossary" or something.
+% Second parameter is the max length of bold terms.
+%\begin{mclistof}{List of terminology definitions}{5.5cm}
+\begin{mclistof}{List of terminology definitions}{1cm}
+
+\item[Bound gene] \hfill \\ A gene is considered bound if a ChIP-seq peak for a TF is found annotated to the nearest expressed promoter.
+
+\item[Co-interaction] \hfill \\  Cases where two TFs commonly regulate the same enhancer or promoter regions in a GRN model. This definition does not imply cooperation.
+
+\item[Definitive haematopoiesis] \hfill \\  The usage in this thesis refers to the generation of haematopoietic progenitors that persist in adult life, originating from either the yolk sac or the AGM. Historically, the yolk sac has previously been considered the site of primitive haematopoiesis. 
+
+\item[Degree centrality] \hfill \\  Network statistic. The total number of edges connecting to an individual node (gene/protein).
+
+\item[Edge] \hfill \\  Connection within a network. Two nodes are connected by an edge, which can be directional. Represented in this thesis as arrows, where the arrow point indicates the direction, such as TF regulation directed to a gene target.
+
+\item[MLL-N/AF4-C] \hfill \\  When referring to MLL-N or AF4-C in ChIP-seq experiments, this refers to antibodies generated recognising the N or C terminus of the protein. MLL-N antibodies will bind to both wt-MLL and MLL-AF4. This project assumes MLL-N binding profiles reflect MLL-AF4 binding, as the majority of the DNA association domains are retained on the N-terminus portion of MLL. Robust MLL-AF4 peak calls were determined by MLL-N and AF4-C overlaps.
+
+\item[Network motif] \hfill \\  The usage of the term "network" or "GRN" motif (as opposed to TF binding motif) refers to FFL and cascade motifs. These being specific 3-node network configurations that commonly occur as sub-structures in networks.
+
+\item[Node] \hfill \\  Unit of a network. In this thesis this is used to refer to genes and their protein products interchangeably, depending on whether they are regulating (TF proteins) or targets (genes).
+
+\item[Stress and betweenness centrality] \hfill \\  Similar network statistics that quantify how often a node is on a shortest path between other nodes of the network. Shortest paths are calculated between all possible pairs of nodes. Stress and betweenness are measures of how frequently an individual node is part of a shortest path. Stress is a quantification of shortest paths, while betweenness is represented as the proportion of all shortest paths in the network that pass through the node in question. As such, these measures can be thought to measure "bottle-necks" between two network regions.
+
+\item[TF binding motif] \hfill \\  The usage of the term TF (DNA) binding motif (as opposed to network motif) refers to DNA sequences that particular TFs have an affinity to bind to. 
+
+\end{mclistof} 
+
+
+% TF motifs and GRN motifs

@@ -1,0 +1,473 @@
+
+\chapter{\label{chapter2_methods}Materials and methods} 
+\chaptermark{Chapter 2 - Materials and methods}
+
+\begingroup
+\raggedright
+\minitoc
+\endgroup
+
+\section{Mouse husbandry}
+
+All procedures involving mice were in compliance with UK Home Office regulations and the Oxford University Clinical Medicine Ethical Review Committee. Mice were housed in individually ventilated cages with free access to food and water and maintained in a 12-hour light-dark cycle.
+
+\section{Embryo studies}
+
+\subsection{\label{ch2:embryo-collection}Timed matings and embryo collection}
+
+Timed pregnancies were generated through overnight mating. To acquire transgenic embryos, matings were set up with (CBA × C57BL/6)/F1 females and 23GFP (\textit{Runx1} +23 GFP enhancer reporter) transgenic males (maintained on a mixed (CBA × C57BL/6) background). To acquire wild type embryos, matings were set up with (CBA × C57BL/6)/F1 females and (CBA × C57BL/6)/F1 males. Confirmation of a vaginal plug after overnight mating was marked embryonic day (E)0.5. At the appropriate developmental time point, mice were killed by a Schedule 1 method and embryos extracted from the uteri, and staged by somite pairs. 
+
+\subsection{\label{ch2:embryo-dissection}Embryo tissue dissection and cell sorting}
+Embryo dissections for RNA-seq and ATAC-seq experiments (chapter \ref{chapter3_EHT}) were performed as previously described \citep{swiers_early_2013} by members of the de Bruijn lab. Para-aortic splanchnopleura (PAS)/AGM and VU vessels were dissected from E8.5 (PAS only), E9.5 and E10.5 embryos in PBS supplemented with 10\% fetal calf serum (FCS), 50 U/ml penicillin, and 50 \microg{}/ml streptomycin (Gibco). PAS/AGM+VU tissues were pooled and incubated for 15 min at 37°C in PBS without calcium or magnesium, containing 10\% FCS, 50 U/ml penicillin, 50 \microg{}/ml streptomycin, and 0.1\% (w/v) type I collagenase (Sigma). Cells were disassociated by gentle pipetting. 
+
+Cells were washed, resuspended, and incubated in an antibody cocktail (Table \ref{tbl:ch2_mesc-ab}) optimally diluted in 10\% FCS/PBS. Cells were incubated for 30 min 4°C, washed, and resuspended in 10\% FCS/PBS with 1/1000 Hoechst 33258 (Thermo fisher) to stain dead cells. Haematopoietic populations were isolated by fluorescence-activated cell sorting (FACS) on a BD FACSAria Fusion. Sorted phenotypes include E8.5 endothelial cells (EC, Ter119\uneg{}VECad\upos{}CD41\uneg{}CD45\uneg{}23GFP\uneg{}) and pre-HE (Ter119\uneg{}VECad\upos{}CD41\uneg{}CD45\uneg{}23GFP\upos{}), E9.5 HE (Ter119\uneg{}VECad\upos{}\-CD41\uneg{}CD45\uneg{}23GFP\upos{}) and pro-HSC/haematopoietic progenitors (Ter119\uneg{}VECad\upos{}CD41\upos{}CD45\uneg{}), and E10.5 pre-HSC I (Ter119\uneg{}VECad\upos{}\-CD41\upos{}CD45\uneg{}) and pre-HSC II (Ter119\uneg{}VECad\upos{}CD41\upos{}CD45\upos{}). Instruments were set up using unstained and single stain controls and sort gates were drawn according to fluorescent minus one (FMO) controls. All sorts were done by the staff of the WIMM Flow Cytometry core facility. 
+
+    \begin{table}[ht]
+    \centering
+    \caption{Antibodies used for flow cytometry analysis and FACS sorting of EHT cell populations.}
+    \begin{tabular}{@{}lllll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Conjugate} & \textbf{Dilution} & \textbf{Catalogue   number} & \textbf{Company} \\ \midrule
+    CD41 & PE & 1:400 & 558040 & Pharmigen \\
+    CD45 & APCef780 & 1:200 & 13-5821-81 & eBioscience \\
+    Ter119 & PE-Cy7 & 1:200 & 557853 & Pharmigen \\
+    VE-cadherin & APC & 1:200 & 17-1441-82 & eBioscience \\ \bottomrule
+    \end{tabular}
+    \caption*{All antibodies reactive in mouse, and raised in rat.}
+    \label{tbl:ch2_mesc-ab}
+    \end{table}
+    
+\subsection{Whole mount immunofluorescence imaging}
+
+Embryos at day E8.5 were processed for whole-mount immunofluorescence analysis as described in \cite{yokomizo_whole-mount_2012}. Embryos were fixed in 4\% paraformaldehyde for 30 min 4°C, then washed with PBS 3x 10 min each. Embryos were dehydrated by 1x 50\% methanol/PBS 10 min, followed by 2x 100\% methanol 10 min washes. Dehydrated embryos were stored at -20°C. 
+
+Before antibody staining, embryos were rehydrated by 1x 50\% methanol/PBS 10 min, followed by 2x PBS 10 min washes. Embryos were kept in the dark during all wash and incubation steps. Embryos were incubated with blocking buffer (0.4\% triton X-100, 10\% FCS in PBS) for 3 hours 4°C to block non-specific binding of antibodies. Primary antibodies were diluted in blocking buffer (see table \ref{tbl:ch2_whole-mount-ab}), and embryos were incubated with 200 \microl{} antibody mix overnight at 4°C with rocking. Embryos were washed 3x with blocking buffer for 2 hours each wash. Secondary antibodies were diluted in blocking buffer (see table \ref{tbl:ch2_whole-mount-ab}), and embryos were incubated with 200 \microl{} antibody mix overnight at 4°C with rocking. Embryos were washed 3x with blocking buffer for 2 hours each wash. Embryos were washed 3x 20 min with PBS with 0.4\% triton-X 100. Embryos were dehydrated in methanol, as above. Using molten 1\% agarose, embryos were anchored onto a coverslip with a FastWell reagent barrier (664113-GRA, Grace Bio-Labs) sealed, and the FastWell was filled with methanol. Embryos were washed 3x 1 min with methanol. A 1:1 solution of benzyl alcohol (\#402834, Sigma) and benzyl benzoate (\#0215483990, MP Biomedicals) was prepared (BABB solution). Embryos were washed 3x 1 min with a 50\% methanol and 50\% BABB solution. 100\% BABB solution washes were performed until the embryos were sufficiently clear. A coverslip was applied to the surface of the FastWell, and sealed with nail polish to prevent leakage. 
+
+Image acquisition was performed using a Zeiss AXIO Observer.Z1 inverted microscope equipped with a Zeiss LSM-880 confocal system using an 25x LDLCI PlnApo NA:0.8 DI objective. Image acquisition settings were adjusted on the basis of unstained, single stain, and FMO controls.
+
+    \begin{table}[ht]
+    \caption{Antibodies used for whole-mount immunofluorescence.}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{}llllll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Conjugate} & \textbf{Dilution} & \textbf{Raised in} & \textbf{Catalogue number} & \textbf{Company} \\ \midrule
+    CD31 & Unconjugated & 1:200 & Goat & AF3628 & R\&D Systems \\
+    GFP & Unconjugated & 1:200 & Chicken & ab13970 & Abcam \\
+    CD109 & Unconjugated & 1:100 & Rabbit & 24765S & Cell Signaling \\
+    anti-Goat IgG & AF647 & 1:200 & Donkey & A21447 & Invitrogen \\
+    anti-Chicken IgG & AF488 & 1:200 & Donkey & 703-545-155 & Jackson \\
+    anti-Rabbit IgG & AF594 & 1:200 & Donkey & A21207 & Invitrogen \\ \bottomrule
+    \end{tabular}
+    }
+    \label{tbl:ch2_whole-mount-ab}
+    \end{table}
+
+
+\section{Cell culture}
+
+All cell lines were grown in a 37°C humidified incubator with 5\% CO\textsubscript{2}, and were confirmed to be free of mycoplasma.
+
+\subsection{Culturing mESCs}
+
+Mouse embryonic stem cells (mESCs) (E14, strain 129/Ola) were cultured in G-MEM medium (Thermo Scientific) with 10\% FCS (Gibco), 100 mM non-essential amino acids (Gibco), 2 mM L-glutamine (Gibco), 100 mM sodium pyruvate (Gibco), 100 \microm{} $\beta$-mercaptoethanol (Gibco), and leukaemia inhibitor factor (LIF, prepared in house). mESCs were passaged every 2-3 days with 0.05\% Trypsin (Gibco). 
+
+\subsection{Culturing THP1, SEM, and RS4;11 cell lines}
+
+SEM cells, a MLL-AF4 B cell ALL line \citep{greil_acute_1994}, were purchased from DSMZ (www.dsmz.de), and cultured in Iscove’s modified Dulbecco’s medium (IMDM) with 10\% FCS and 1× GlutaMAX. Cell density was maintained between \xten{5}{5}/ml and \xten{2}{6}/ml. RS4;11 and THP-1 cells were purchased from ATCC (www.atcc.org) and cultured in RPMI-1640 with 10\% FBS and 1× GlutaMAX. Cell density was maintained between \xten{5}{5}/ml and \xten{1.5}{6}/ml. 
+
+\subsection{mESC differentiations}
+
+Serum free mESC differentiations were performed by L. Greder, based on \cite{pearson_vivo_2015} with minor modifications, for validation experiments in section \ref{ch3:notch}. mESC growth media was replaced with media -LIF for 24 hours. \xten{7.5}{5} mESCs were resuspended in 20 ml StemPro-34 with StemPro-Nutrient supplement (Gibco) containing 8 mg/ml ascorbic acid (Sigma), 100 U/ml transferrin (Roche), 2 mM L-glutamine (Gibco), and 5 ng/ml BMP-4 (R\&D Systems), then cultured for 72 hours (day 3) to form embryoid bodies (EBs). Medium was supplemented with 5 ng/ml bFGF (R\&D Systems) and 5 ng/ml Activin A (Peprotech). After 24 hours (day 4), EBs were disassociated in 0.05\% Trypsin (Gibco) and stained using anti-Flk1 APC conjugated antibody (17-5821-81, eBioscience) diluted 1/100 in 5\% FCS/PBS for 10 min 4°C. Flk1+ cells were isolated by FACS using a BD FACSAria Fusion. \xten{6}{5} Flk1+ cells were plated in differentiation medium with 5 ng/ml BMP-4 (R\&D Systems), 5 ng/ml Activin A (Peprotech), 10 ng/ml SCF (Peprotech), and 25 ng/ml VEGF (Peprotech). After 24 hours (day 5), medium was refreshed containing 10 ng/ml SCF (Peprotech) and 25 ng/ml VEGF (Peprotech). After 48 hours' culture (day 7), cells were harvested for flow cytometry analysis. Suspension and adherent cells were disassociated by 0.05\% Trypsin (Gibco). Up to \xten{1}{6} cells were washed in 5\% FCS/PBS, then resuspended in 50 \microl{} antibody cocktail (Table \ref{tbl:ch2_mesc-ab}) and incubated for 10 min 4°C. Cells were washed and resuspended in 5\% FCS/PBS with 1/1000 Hoechst 33258 (Thermo fisher) to stain dead cells, before analysis by flow cytometry. Instruments were set up using unstained and single stain controls. Sort gates were drawn according to FMO controls. All sorts were done by the staff of the WIMM Flow Cytometry core facility. 
+
+\section{MLL-AF9 transduced GMP experiments}
+
+\subsection{\label{ch2:gmp-isolation}Bone marrow GMP isolation}
+Granulocyte-Monocyte Progenitors (GMPs) were isolated from mouse bone marrow (BM), with assistance from S. Valletta and S. Rice (Roy lab). GMPs were harvest from C57BL/6 \mybwt{} and \mybmre{} mice (described in section \ref{ch5:mre-intro}). \mybmre{} mice were generated by insertion of a \textit{miR-196b} miRNA response element (MRE) into the 3' UTR of \textit{Myb}, as generated in \citep{lau_role_2022}, and were kindly provided by I. Lau. Female mice between 8 and 11 weeks of age (age matched between genotypes) were killed by a Schedule 1 method, and tibiae and femurs were dissected out. Tibiae and femurs from 3-5 mice (per replicate, per genotype) were pooled and crushed using a pestle and mortar, then cells were passed through a 50 \microm{} filter with 10 ml 5\% FCS/PBS. Cell counts were obtained using a Pentra ES 60 (Horiba). Cells were enriched for c-Kit expression by resuspension with 2.5 \microl{} magnetic c-Kit beads (\#130-091-224, Miltenyi) in 100 \microl{} 5\% FCS/PBS per \xten{1}{8} cells, and incubation at 4°C 20 min with gentle agitation. Cells were washed, then c-Kit+ cells were isolated using MACS columns, as per manufacturer's instructions, and counted using a Pentra ES 60 (Horiba). 
+
+c-Kit+ cells were incubated with either PE-Cy7 conjugated anti-CD16/32 monoclonal antibody (25-0161-82, eBioscience), or unconjugated anti-CD16/32 monoclonal antibody (14-0161-81, eBioscience) for controls, to block non-specific antibody binding at 4°C 15 min. Antibody cocktails for controls and samples were prepared at 2X concentration, and added to cells incubated in CD16/32 antibodies at a 1:1 volume for a final 1X concentration, and incubated 4°C 15 min. Antibody panel details are in table \ref{tbl:ch2_gmp-ab}. Cells were washed and resuspended in 5\% FCS/PBS with 1X 7-aminoactinomycin D (7AAD) viability dye (\#A9400, Sigma Aldrich). GMPs were then isolated by FACS on a BD FACSAria Fusion, as a Lin\uneg{}cKit\upos{}CD41\uneg{}CD150\uneg{}CD16/32\upos{} phenotype. Instruments were set up using unstained and single stain controls. Sort gates were drawn according to FMO controls. All sorts were done by the staff of the WIMM Flow Cytometry core facility. 
+
+Isolated GMPs were cultured overnight in 500 \microl{} OptiMEM with 20\% FBS, 50 U/ml penicillin, 50 \microg/ml streptomycin, and cytokines (10 ng/\microl{} mSCF, 5 ng/\microl{} mIL3, and 5ng/\microl{} IL6, Stemcell technologies) in a 37°C humidified incubator with 5\% CO\textsubscript{2}. 
+
+    \begin{table}[ht]
+    \caption{Antibodies used for GMP isolation.}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{}llllllll@{}}
+    \toprule
+    \textbf{Target (mouse)} & \textbf{Conjugate} & \textbf{Final dilution} & \textbf{Clone} & \textbf{Catalogue number} & \textbf{Company} & \textbf{Notes} \\ \midrule
+    CD16/32 & Unconjugated & 1/50 & RA3-6B2 & 14-0161-81 & eBioscience & Fc block \\
+    CD16/32 & PE-Cy7 & 1/150 & 93 & 25-0161-82 & Invitrogen &  \\
+    CD150 & APC & 1/100 & TC15-12F12.2 & 115910 & BioLegend &  \\
+    c-Kit & APCef780 & 1/1200 & 28B & 47-1171-82 & eBioscience &  \\
+    CD41 & BV421 & 1/200 & MWReg30 & 133911 & BioLegend &  \\
+    Sca1 & BV786 & 1/200 & D7 & 563991 & \multicolumn{2}{l}{BD Biosciences} \\
+    CD4 & PE-Cy5 & 1/1600 & RM4-5 & 100514 & BioLegend & Lineage \\
+    CD8a & PE-Cy5 & 1/1600 & 53-6.7 & 15-0081-83 & eBioscience & Lineage \\
+    CD5 & PE-Cy5 & 1/1200 & 53-7.3 & 100610 & BioLegend & Lineage \\
+    Gr1 & PE-Cy5 & 1/400 & RB6-8C5 & 15-5931-82 & Invitrogen & Lineage \\
+    Mac1 & PE-Cy5 & 1/800 & M1/70 & 15-0112-82 & eBioscience & Lineage \\
+    B220 & PE-Cy5 & 1/400 & RA3-6B2 & 103210 & BioLegend & Lineage \\ \bottomrule    
+    \end{tabular}
+    }
+    \caption*{All antibodies reactive in mouse, and raised in rat.}
+    \label{tbl:ch2_gmp-ab}
+    \end{table}
+
+\subsection{\label{ch2_gmp-transduction}Transduction of mouse GMPs}
+
+Isolated mouse GMPs were transduced using an MLL-AF9/mCherry plasmid generated by I. Lau \citep{lau_role_2022} (see Appendix \ref{fig:app_plasmid-map} for plasmid map). This plasmid contained human \textit{MLL-AF9} under the murine stem cell virus (MSCV) promoter, and \textit{mCherry} under the 3-phosphoglycerate kinase (PGK) promoter, allowing constitutive activation in GMPs. To generate retroviral particles, 293T cells were co-transfected with the MSCV MLL-AF9/mCherry construct and Eco-Pak packaging plasmid (AddGene \#12371), using PEIpro reagent (Polyplus) according to manufacturer's instructions. Viral supernatant was harvested after 24 and 48 hours post transfection and concentrated using Retro-X reagent (\#631456, Takara). 1 part Retro-X reagent was added to 3 parts supernatant and mixed by gentle inversion, then incubated 4°C overnight. Retroviral supernatant was centrifuged 1500 RCF 4°C for 45 min, and the pellet resuspended at 1/100\textsuperscript{th} the original volume, and stored at -80°C. 24 hours after GMP isolation and culture in 500 \microl{} OptiMEM with 20\% FBS, 50 U/ml penicillin, 50 \microg/ml streptomycin, and cytokines (10 ng/\microl{} mSCF, 5 ng/\microl{} mIL3, and 5 ng/\microl{} IL6, Stemcell technologies) (section \ref{ch2:gmp-isolation}), 50 \microl{} concentrated retrovirus and 7 \microg{}/ml Polybrene was added to cell suspension. Cells were spinoculated by centrifugation at 1500 RCF 37°C for 1 hour, then incubated at 37°C with 5\% CO\textsubscript{2} for 24 hours.
+
+\subsection{\label{ch2:gmp-methocult}MethoCult expansion of transduced GMPs}
+
+Following GMP infection with the MSCV MLL-AF9/mCherry plasmid (section \ref{ch2_gmp-transduction}), 3000-7000 mCherry+ cells were sorted by FACS on a BD FACSAria Fusion directly into 1.5 ml MethoCult semi-solid
+methylcellulose-based media (M3434, STEMCELL technologies). Cells were vortexed in MethoCult to sufficiently distribute cells, and 1 ml was dispensed into a dish. Cells were cultured at 37°C for 7 days (week 1, W1). At W1, cells were harvested by dissolving MethoCult in IMDM + 10\% FCS and washing. Cells were taken for RNA-seq (section \ref{ch2:rna-polya}), ATAC-seq (section \ref{ch2:atac}) and ChIPmentation (section \ref{ch2:chipment}) experiments. \xten{1}{4} of remaining cells were added to 4 ml MethoCult (M3434) and replated as above into 3 dishes (1 ml, 2500 cells, per dish), and incubated at 37°C for 7 days. Cell harvesting and replating was performed twice more as above, each after 7 days incubation at time points week 2 (W2) and week 3 (W3). Cells harvested at W3 were validated for \textit{MLL-AF9} expression and \mybmre{} genotype from RNA samples by RT-PCR (cDNA generated as in section \ref{ch2_rna-extract}). RT-PCR was performed using primers spanning the human \textit{MLL-AF9} fusion break point (5'-GAGGATCCTGCCCCAAAGAAAAG-3' \& 5'-TCACGATCTGCTGCAGAATGTGTCT-3') or primers flanking the inserted \textit{miR-196b} MRE (5'-GGGAGATTTGTGTTGTTTATGTCA-3' \& 5'-GGCAGAAACTGGCTGTTGA-3'). PCR reactions were performed with the following reaction mix: 2 \microl{} cDNA, 1 \microl{} 10 \microm{} forward primer, 1 \microl{} 10 \microm{} reverse primer, 15 \microl{} 2x KAPA HiFi HotStart (KK2601, Roche), 15 \microl{} \water{}. PCR amplification was performed in a thermocycler with the following conditions: 95°C 5 min; 30 cycles of (98°C 20 s, 65°C 15 s; 72°C 30 s); 72°C 5 min; 4°C hold.
+
+\section{\label{ch2_sirna}siRNA knockdowns}
+
+siRNA knock-downs (KDs) in chapter \ref{chapter4_MA4} were performed using a rectangle pulse EPI 2500 electroporator (Fischer, Heidelberg). \xten{1-7}{7} SEM or RS4;11 cells were mixed with 10 \microl{} 20 \microm{} siRNA in 500 \microl{} media, and electroporated at 330V for 10 msec in a 2 mm cuvette. Cells were incubated at room temperature for 15 min, then added to growth media at a cell density of \xten{1}{6}/ml. For 96 hours' KD experiments, cells were re-transfected as above at 48 hours post initial transfection. SEM MLL-AF4 siRNA (siMA6), RS4;11 MLL-AF4 siRNA (siMARS) and scrambled control (siMM) siRNA sequences were sourced from \cite{thomas_targeting_2005}. Commercial siRNA used are detailed in Table \ref{tbl:ch2_sirna}. 
+
+    \begin{table}[ht]
+    \caption{Commercial siRNA used for perturbation experiments.}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{}lll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Catalogue    Number} & \textbf{Brand} \\ \midrule
+    \textit{RUNX1} & J-003926-05 & Dharmacon ON-TARGETplus single siRNA \\
+    \textit{MAZ} & s8543 & Ambion Silencer Select \\
+    \textit{MYB} & s9110 & Ambion Silencer Select \\
+    \textit{Non-targeting} & D-001810-10-20 & Dharmacon ON-TARGETplus non-targeting pool \\ \bottomrule
+    \end{tabular}
+    }
+    \label{tbl:ch2_sirna}
+    \end{table}
+
+\section{Colony-forming assays}
+
+SEM cells were transfected with siRNA (as in section \ref{ch2_sirna}), and 48 hours later re-transfected with the same siRNA. 24 hours later (72 hours' KD) 500 cells were added to 4 ml IMDM MethoCult media + 20\% FCS (H4100 STEMCELL technologies). Cells were vortexed to distribute them evenly, and MethoCult was dispensed into three dishes (1 ml per dish, 125 cells). Colonies were incubated for 14 days (37°C, 5\% CO2) prior to counting.
+
+\section{Drug treatments and dose-response curve analysis}
+
+The small molecule RUNX1 inhibitor (AI-10-104) and inactive control (AI-4-88) were gifted by the Bushweller lab \citep{illendula_small-molecule_2015, illendula_small_2016}. In single treatment experiments, SEM cells were cultured for 24 hours in the presence of 10 \microm{} AI-10-104, AI-4-88, or DMSO, then characterised by ChIP and qRT-PCR assays. In double treatment experiments, SEM cells were cultured for 24 hours with 10 \microm{} AI-10-104, AI-4-88, or DMSO, as well as a range of venetoclax (S8048-SEL, Seleck) concentrations up to 10 \microm{}. Cell viability following RUNX1 inhibitor and venetoclax co-treatment was assayed by CellTiter-Glo (CTG) luminescence assay (\#G7570, Promega) according to manufacturer's instructions. 100 \microl{} cell suspension was mixed with 100 \microl{} CTG reagent in white walled 96 well assay plates (Thermo). Plates were loaded on a BMG FLUOstar OPTIMA plate reader, and cells lysed by 2 min orbital shaking and room temperature incubation for 10 min, then luminescence was recorded with integration time set to 0.25-1 sec. Dose-response curves were fit to the data and IC50 values calculated using the R package drc (v3.0-1, \cite{ritz_dose-response_2015}).
+
+\section{Western blot analysis}
+
+Proteins were extracted from \xten{1}{6} cells by resuspension in BC300 lysis buffer (20 mM Tris-HCl pH 8, 20\% glycerol, 300 mM KCl, 5 mM EDTA) + 0.5\% IGEPAL, with protease inhibitors. Cells were incubated 4°C 30 min. Lysed cells were spun at 20000 RCF 4°C for 10 min, and supernatant containing protein was collected. 1x NuPAGE LDS sample buffer (\#NP0008, Novex) + 1\% $\beta$-mercaptoethanol was added to protein extract, then heated at 95°C for 5 min. Protein extract from the equivalent of \xten{1}{5} cells was loaded on NuPAGE 4\%-12\% BisTris gels (Life Technologies) and run at 180v for 1 hour in 1X MOPS SDS Running buffer (\#NP0001, Invitrogen). Proteins were transferred onto polyvinylidene fluoride membrane (\#IPVH00010, Immobilon). Membranes were washed in 100\% methanol, then dried. Membranes were then rehydrated and probed at 4°C overnight using antibodies diluted in 5\% milk. All antibodies used were raised in rabbit, and diluted as in table \ref{tbl:ch2_western}. Following 3x 5 min washes with TBST (0.1\% Tween 20 in tris buffered saline), the membranes were incubated with secondary antibody (goat anti-rabbit HRP, A6667, Sigma) at 1:10000 dilution in 5\% milk for 1 hour at room temperature. Following 3x 5 min washes with TBST, membranes were probed using ECL Prime Western Blotting Detection Reagent (\#RPN2232, Cytiva) for chemiluminescence detection. Membranes were subsequently imaged using ChemiDoc MP (BioRad).
+
+    \begin{table}[ht]
+    \centering
+    \caption{Antibodies used for western blot analysis}
+    \begin{tabular}{@{}llll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Dilution} & \textbf{Catalogue number} & \textbf{Company} \\ \midrule
+    RUNX1 & 1/5,000 & 4334S & Cell Signaling \\
+    Caspase-9 & 1/10,000 & ab202068 & Abcam \\
+    GAPDH & 1/10,000 & A300-641A & Bethyl \\
+    Vinculin & 1/50,000 & ab129002 & Abcam \\ \bottomrule
+    \end{tabular}
+    \label{tbl:ch2_western}
+    \end{table}
+
+\section{Gene expression analysis by qRT-PCR}
+
+\subsection{\label{ch2_rna-extract}Total RNA extraction and cDNA synthesis}
+Total RNA was extracted from \xten{1-5}{6} SEM cells using the RNeasy Mini kit (\#74104, Qiagen). On-column DNA digestion was performed as according to the RNeasy Mini protocol using DNase I (\#79254 Qiagen). 
+
+RNA concentrations were determined by NanoDrop (Thermo scientific), and samples within the same experiment were diluted to the same concentration. To generate cDNA, a reaction mix of 1 \microg{} RNA in 8 \microl{} \water{}, 1 \microl{} 10 mM dNTP mix (\#18427-013, Invitrogen), and 1 \microl{} 50 \microm{} random hexamer primers (\#S06405, Roche) was incubated at 65°C 5 min, and cooled to 4°C for 2 min in a thermocycler (BioRad). Reverse transcription was performed by adding 2 \microl{} \water, 4 \microl{} 5X First strand buffer (\#02321, Invitrogen), 2 \microl{} 0.1 M dithiothreitol (DTT, \#00147, Invitrogen), 1 \microl{} 40 U/\microl{} RNaseOUT (\#51535, Invitrogen), and 1 \microl{} 200 U/\microl{} SuperScript III Reverse Transcriptase (\#56575, Invitrogen), and incubated in a thermocycler for: 20°C 2 min; 50°C 1 hour; 75°C 20 min. cDNA product was then diluted 10x in \water{}.
+
+\subsection{\label{ch2_qpcr}qRT-PCR analysis}
+
+qRT-PCR analysis was performed using either TaqMan or SYBR chemistry. For TaqMan probes, a reaction mix of 1 \microl{} primer/probe mix (Invitrogen), 10 \microl{} TaqMan Fast Advanced Master Mix (\#4444557, Applied Biosystems), and 4 \microl{} \water{} was added to each well of a 96 well reaction plate (\#4346906, Applied Biosystems). For SYBR primers, a reaction mix of 0.5 \microl{} 10 \microm{} forward and reverse primers, 12.5 \microl{} Fast SYBR Green Master Mix (\#4385612, Applied Biosystems), and 7 \microl{} \water{} was added to each well. 5 \microl{} diluted cDNA was added to each reaction mix, and the plate was sealed with a MicroAmp Adhesive Film (\#4311971, Applied Biosystems). The plate was briefly centrifuged, then loaded onto a QuantStudio 3 Real-time PCR machine (Applied Biosystems). TaqMan and SYBR reactions were run using the following cycling conditions: 95°C 20 s; 40 cycles of (95°C 1 s; 60°C 20 s). Ct values were analysed using the $\Delta\Delta$Ct method \citep{livak_analysis_2001}, as detailed below, normalising to the housekeeping gene \textit{GAPDH}. Primers and TaqMan probes are detailed in Table \ref{tbl:ch2_exprs-qpcr}. Statistical analyses were performed using two-sided student's t-test.
+\begin{align*}
+    \Delta{}Ct &= Ct(Gene) - Ct(\textit{GAPDH}) \\        
+    \Delta{}\Delta{}Ct &= \Delta{}Ct(sample) - \Delta{}Ct(reference) \\
+    \text{Fold difference} &= 2^{-\Delta{}\Delta{}Ct}
+\end{align*}
+
+    \begin{table}[ht]
+    \caption{Primers and TaqMan probes used for gene expression qRT-PCR analysis}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{}lllll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Species} & \textbf{Primer   sequence (5’-3’) / Catalogue \#} & \textbf{Chemistry} & \textbf{Note} \\ \midrule
+    \textit{GAPDH} & Human & Hs03929097\_g1 & TaqMan &  \\
+    \textit{RUNX1} & Human & Hs00231079\_m1 & TaqMan &  \\
+    \textit{CASP9} & Human & Hs00609647\_m1 & TaqMan &  \\
+    \textit{BCL2} & Human & Hs00608023\_m1 & TaqMan &  \\
+    \textit{MYC} & Human & Hs0015348\_m1 & TaqMan &  \\
+    \textit{MYB} & Human & Hs00920556\_m1 & TaqMan &  \\
+    \textit{BCL2   (intronic)} & Human & F 5'-CGATAACGCCTGCCATCTAA-3' & SYBR &  \\
+    \textit{} &  & R 5'-CCACCACATCCTACTGGATTAC-3' &  &  \\
+    \textit{MLL-AF4} & Human & F 5'-AGGTCCAGAGCAGAGCAAAC-3' & SYBR &  \\
+    \textit{} &  & R 5'-CGGCCATGAATGGGTCATTTC-3' &  &  \\
+    \textit{Ikzf1} & Mouse & Mm01187880\_m1 & TaqMan & Used by L. Greder \\
+    \textit{Runx1} & Mouse & Mm01213404\_m1 & TaqMan & Used by L. Greder \\ \bottomrule
+    \end{tabular}
+    }
+    \label{tbl:ch2_exprs-qpcr}
+    \end{table}
+
+\section{RNA-seq methods}
+
+\subsection{\label{ch2:rna-polya}Poly-A RNA-seq library preparation}
+
+For standard poly-A RNA-seq (as used in chapter \ref{chapter5_normToLeuk}), total RNA was extracted from \xten{5}{5} MLL-AF9 transformed GMPs (section \ref{ch2:gmp-methocult}) using an RNeasy Mini kit (74104, Qiagen), and RNA quality assessed by TapeStation. Poly-A RNA was isolated using the NEBNext Poly(A) mRNA magnetic isolation module (E7490, NEB). 1 \microg{} RNA was incubated with oligo dT beads d(T)25 in 1X RNA binding buffer at 65°C 5 min then cooled to 4°C. Beads were washed 2x in wash buffer (E7490, NEB), resuspended in 50 \microl{} Tris buffer, then incubated at 80°C 2 min to elute RNA. RNA was rebound to beads by addition of 1X RNA binding buffer and incubation at room temperature for 5 min. Libraries were then prepared using the NEBNext Ultra II Directional RNA library prep kit (E7760, NEB). Library quality was assessed using a DNA 1000 high sensitivity Screen Tape (Agilent 2200 TapeStation system) and quantified by qRT-PCR (KAPA library quantification kit KK4828). Samples were 150 bp paired-end sequenced by Novogene on a NovaSeq 6000. Tapestation traces, read counts and PCR duplication levels are displayed in Appendix \ref{fig:app_methocult-tapestation} and \ref{fig:app_methocult-qc}.
+
+\subsection{\label{ch2:rna-nascent}Nascent RNA-seq library preparation}
+
+For nascent RNA-seq experiments (as used in chapter \ref{chapter4_MA4}), \xten{1}{8} SEM or RS4;11 cells following siRNA treatment were treated with 500 \microm{} 4-thiouridine (4-SU) for 1 hour at 37°C. Cells were lysed with TRIzol (\#15596026, Life Technologies), and total RNA was extracted by chloroform and ethanol precipitation. DNA was degraded by DNase I treatment with the TURBO DNA-free kit (\#AM1907). To biotinylate 4-SU incorporated RNA, up to 100 \microg{} RNA was incubated with 200 \microg{}/ml EZ-link HPDP-Biotin (\#21341, Pierce) in biotinylation buffer (10 mM Tris-HCl pH 7.4, 1 mM EDTA) for 90 min at room temperature, followed by chloroform extraction. Biotinylated RNA was isolated by magnetic streptavidin bead pulldown. RNA was first incubated at 65°C 10 min, then incubated with an equal volume of magnetic streptavidin beads ($\mu$MACS Streptavidin Kit, \#130-074-101, Miltenyi). RNA and beads were passed through a $\mu$MACS columns on magnet, then washed 3x with 900 \microl{} 65°C wash buffer (100 mM Tris-HCl pH 7.5, 10 mM EDTA, 1 M NaCl, 0.1\% Tween-20) and 3x room temperature wash buffer. RNA was eluted from columns by two rounds of 100 \microl{} 100 mM DTT application. RNA was purified using a RNeasy MinElute kit (\#74204, Qiagen). Libraries were then prepared using the NEBNext Ultra II Directional RNA library prep kit (E7760, NEB). Library quality was assessed using a DNA 1000 high sensitivity Screen Tape (Agilent 2200 TapeStation system) and quantified by qRT-PCR (KAPA library quantification kit KK4828), then 150 bp paired-end sequenced using a NextSeq 500 (Illumina). Read counts and PCR duplication levels are displayed in Appendix \ref{fig:app_chapter4-qc}.
+
+
+\subsection{\label{ch2:rna-embryo}Library preparation from embryonic populations}
+
+RNA-seq libraries from embryonic populations were prepared and sequenced by the WTCHG (Oxford). For each haematopoietic population from E8.5-E10.5 mouse embryos (see section \ref{ch2:embryo-dissection}), 100 cells were sorted directly into 3.16 \microl{} lysis mix (Clontech), then used for library preparation by the WTCHG using the SMARTer kit (Clontech, \#634935) for ultra-low RNA preparation. Library quality was assessed using a DNA 1000 high sensitivity Screen Tape (Agilent 2200 TapeStation system) and quantified by qRT-PCR (KAPA library quantification kit KK4828). Libraries were then paired-end sequenced using an Illumina Hiseq2000. Read counts and PCR duplication levels are displayed in Appendix \ref{fig:app_eht-qc}.
+%cDNA was generated by reverse transcriptase reactions, and full-length cDNA was pre-amplified using a 12-cycle PCR program following the SMARTer protocol. Full-length cDNA was then sheared using a Covaris ME220. Library preparation was performed using the NEBNext DNA library Prep Master Mix Set for Illumina (\#E6040) to ligate Illumina adaptors. 
+
+\section{Chromatin immunoprecipitation (ChIP) methods}
+
+\subsection{\label{ch2:chip}ChIP}
+
+\xten{1}{7-8} cells were washed with PBS, then fixed. For assaying chromatin modifications, cells were fixed by incubation with 1 ml 1\% formaldehyde at room temperature 10 min with rotation. For assaying TFs, cells were fixed by incubation with 1 ml 2 mM disuccinimidyl glutarate (DSG) at room temperature 30 min with rotation, followed by incubation in 1 ml 1\% formaldehyde at room temperature 30 min with rotation. After fixation, cell pellets were washed with PBS, supernatant discarded, and snap frozen on dry ice. Fixed pellets were stored at -80°C.
+
+For \xten{1}{8} cells, the following steps were split amongst 10 tubes, such that a maximum of \xten{1}{7} cells were sonicated at a time. Fixed pellets were resuspended in 120 \microl{} SDS lysis buffer (1\% SDS, 10 mM EDTA, 50 mM Tris pH 8), with protease inhibitors. Cell pellets were sheared by passaging through a 27G needle, then incubated at 4°C 10 min. 120 \microl{} lysed cell suspension was transferred to a Covaris microTUBE (\#520045,Covaris) and sonicated for 5 min (for histone modifications) or 10 min (for TFs) using a Covaris ME220 (Woburn, MA, USA). Sonication parameters were set as follows: peak power = 75, duty factor = 25\%, 500 cycles per burst. Sonicated samples were centrifuged at 20000 RCF 10 min 4°C, and supernatant collected. Samples were diluted 1:10 in ChIP dilution buffer (CDB) containing 0.01\% SDS, 1.1\% Triton X-100, 16.7 mM Tris-HCl pH 8.1, 167 mM NaCl, 1.2 mM EDTA. To pre-clear, samples were incubated with 5 \microl{} of a 1:1 mixture of Protein A (\#10001D, Invitrogen) and Protein G (\#10004D, Invitrogen) Dynabeads at 4°C 15 min with rotation. Samples were centrifuged at 1000 RCF 2 min, and pre-cleared supernatant collected. 1 ml aliquots were used for antibody incubation, and 50 \microl{} aliquots for input material. 2 \microl{} antibody (1:500 dilution) was added to 1 ml pre-cleared chromatin and incubated 4°C overnight with rotation. ChIP antibodies are detailed in Table \ref{tbl:ch2_chip-antibodies}.
+
+    \begin{table}[ht]
+    \centering
+    \caption{Antibodies used for ChIP experiments.}
+    \begin{tabular}{@{}lll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Catalogue number} & \textbf{Company} \\ \midrule
+    RUNX1 & ab23980 & Abcam \\
+    MLL-N & A300-086A & Bethyl \\
+    AF4-C & ab31812 & Abcam \\
+    MAZ & A301-652A & Bethyl \\
+    H3K27ac & C15410196 & Diagenode \\
+    H3K4me1 & pAb-194-050 & Diagenode \\ \bottomrule
+    \end{tabular}
+    \caption*{All antibodies were raised in rabbit.}
+    \label{tbl:ch2_chip-antibodies}
+    \end{table}
+
+Ab:chromatin complexes were isolated using by incubating 1 ml pre-cleared chromatin + antibody with 15 \microl{} of a 1:1 mixture of Protein A and Protein G Dynabeads (Invitrogen) at 4°C with rotation for at least 4 hours. Beads were washed 3x with RIPA buffer (50 mM HEPES-KOH pH 7.6, 500 mM LiCl, 1 mM EDTA, 1\% IGEPAL, 0.7\% Na deoxycholate), and washed 1x with 50 mM NaCl, 1 mM EDTA, and 10 mM Tris-HCl pH 8. Samples were eluted off beads by incubation with 1\% SDS, 10 mM EDTA, 50 mM Tris-HCl pH 8 at 65°C 30 min, centrifugation at 1000 RCF 2 min, and collection of supernatant. Samples were treated with 1 \microl{} 10 mg/ml RNase A (\#EN0531, Thermo Scientific) at 37°C 30 min, then 1 \microl{} 20 mg/ml proteinase K with incubation at 65°C overnight to reverse DNA crosslinks. DNA was then purified using a QIAquick PCR purification kit (\#28106, Qiagen) according to manufacturer's instructions.
+
+\subsection{ChIP qPCR}
+
+ChIP-qPCR analysis was performed with SYBR chemistry using primers detailed in Table \ref{tbl:ch2_chip-primers}. A reaction mix of 0.5 \microl{} 10 \microm{} forward and reverse primers, 12.5 \microl{} Fast SYBR Green Master Mix (\#4385612, Applied Biosystems), and 7 \microl{} \water{} was added to each well of a 96 well reaction plate (\#4346906, Applied Biosystems). 5 \microl{} DNA was added to each reaction mix, and the plate was sealed with a MicroAmp Adhesive Film (\#4311971, Applied Biosystems). The plate was briefly centrifuged, then loaded onto a QuantStudio 3 Real-time PCR machine (Applied Biosystems). The plate was run using the following cycling conditions: 95°C 20 s; 40 cycles of (95°C 1 s; 60°C 20 s). ChIP signal was calculated as a percentage of input by the following calculation: 
+\begin{align*}
+    \Delta{}Ct &= Ct(Input) - Ct(Sample) \\        
+        \% Input &= 2^{\Delta{}Ct} \times 5
+\end{align*}
+
+\subsection{\label{ch2:chip-lib}ChIP-seq library preparation}
+
+\xten{1}{8} cells were used for ChIP-seq experiments. For ChIP-seq on siRNA treated samples, reference normalisation was performed \citep{orlando_quantitative_2014} by spiking fixed \textit{Drosophila melanogaster} S2 cells prior to sonication in a 1:5 ratio. DNA libraries were generated using Ultra II DNA library preparation kit for Illumina (E7645, NEB) and 75 bp paired-end sequenced using a NextSeq 500 (Illumina). Read counts and PCR duplication levels are displayed in Appendix \ref{fig:app_chapter4-qc}.
+
+    \begin{table}[ht]
+    \caption{Primers used for ChIP qPCR analysis.}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{}ll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Primer} \\ \midrule
+    Negative control (18205) & F - 5'-GGCTCCTGTAACCAACCACTACC-3' \\
+     & R - 5'-CCTCTGGGCTGGCTTCATTC-3' \\
+    +23 RUNX1 enhancer & F - 5'-TGCGAGAGCGAGAAAACCACAG-3' \\
+     & R - 5'-GCAGAAAGCAACAGCCAGAAACG-3' \\
+    CDK6 KMT2A-AFF1 peak & F - 5'-TCGAAGCGAAGTCCTCAACA-3' \\
+     & R - 5'-GCTTGGGCAGAGGCTATGTA-3' \\
+    BMF MLL-AF4/RUNX1 peak & F - 5'-AGAGCCAGAGTGCGTGAGAG-3' \\
+    BMF MLL-AF4/RUNX1 peak & F - 5'-CCACAGAGCAAACACAGG-3' \\ \bottomrule
+    \end{tabular}
+    }
+    \label{tbl:ch2_chip-primers}
+    \end{table}
+
+\subsection{\label{ch2:chipment}ChIPmentation library preparation}
+
+ChIPmentation was performed on low cell count samples in chapter \ref{chapter5_normToLeuk}, using a protocol adapted from \cite{gustafsson_high-throughput_2019}, and optimised by A. Smith (Milne lab, \cite{crump_paf1_2022}). 10 \microl{} Protein A Dynabeads (\#10001D, Invitrogen) were incubated with 1 \microl{} antibody (Table \ref{tbl:ch2_chip-antibodies}) in 200 \microl{} Binding Buffer (0.5\% BSA in PBS with protease inhibitors) at 4°C 4 hours with rotation (referred to as Ab:beads here on). \xten{7.5}{5} MLL-AF9 transformed GMPs (section \ref{ch2:gmp-methocult}) were fixed under histone modification or TF specific conditions as described in section \ref{ch2:chip}. Fixed cells were lysed in 120 \microl{} lysis buffer (0.5\% SDS, 50 mM Tris-HCl pH 8.0, 10 mM EDTA), then transferred to a Covaris microTUBE (\#520045,Covaris) and sonicated as in section \ref{ch2:chip}. 6 \microl{} was collected as input chromatin. Additional lysis buffer was added to sonicated samples for a total volume of 240 \microl{} per antibody (240 \microl{} for TFs, 720 \microl{} for histone modifications). Triton-X 100 was added for a final concentration of 1\%, and samples were incubated 10 min room temperature to neutralise SDS. Samples were pre-cleared by incubation with 5 \microl{} Protein A Dynabeads (Invitrogen) at 4°C 30 min with rotation. Ab:beads incubated as above were washed with 0.5\% FCS/PBS. 240 \microl{} pre-cleared chromatin was added to Ab:beads, then incubated at 4°C overnight with rotation. Of \xten{7.5}{5} cells prepared for histones, three antibodies were used (H3K4me3 ChIPmentation not shown), such that each histone modification ChIPmentation represents \xten{2.5}{5} cells.
+    
+Samples were washed 3x with RIPA buffer, 1x with 1 mM EDTA and 10 mM Tris-HCl pH 8.1, and 1x. with 10 mM Tris-HCl pH 8.1. Chromatin was tagmented by incubating beads in 29 \microl{} Tagmentation Buffer (10 mM Tris-HCl pH 8.1, 5 mM MgCl\textsubscript{2}, 10\% dimethylformamide (DMF)) and 1 \microl{} Tn5 transposase (\#20034197, Illumina) at 37°C for 10 min. After incubation samples were diluted with 150 \microl{} RIPA buffer, then washed with 150 \microl{} 10 mM Tris-HCl pH 8.0. Beads were then resuspended in 22.5 \microl{} \water{}. 22.5 \microl{} tagmented chromatin DNA was indexed by adding 25 \microl{} NEBNext Ultra II Q5 Master Mix (\#M0544S, NEB) + 1.25 \microl{} 5 \microm{} Universal adapter + 1.25 \microl{} 5 \microm{} custom index primer, then PCR amplified with the following cycling conditions: 72°C 5 min, 95°C 5 min, 11x cycles (98°C 10 s, 63°C 30 s, 72°C 3 min). Library clean-up was performed with Agencourt AMPure XP beads at a 1:1 ratio. Library quality was assessed using a DNA 1000 high sensitivity Screen Tape (Agilent 2200 TapeStation system) and quantified by qRT-PCR (KAPA library quantification kit KK4828). Samples were 75 bp paired-end sequenced by paired-end sequencing on a NextSeq 500 (Illumina). Tapestation traces, read counts and PCR duplication levels are displayed in Appendix \ref{fig:app_methocult-tapestation} and \ref{fig:app_methocult-qc}.
+
+\section{\label{ch2:atac}ATAC-seq library preparation}
+
+ATAC-seq libraries were generated from E8.5 - E10.5 mouse embryos by L. Greder (de Bruijn lab) and M. Suciu (Hughes lab), and from MLL-AF9 transformed GMPs myself, using a protocol adapted from \citep{buenrostro_atac-seq_2015}. For mouse haematopoietic populations (section \ref{ch2:embryo-dissection}), 1500 cells were sorted into 100\% FCS (Gibco).
+For MLL-AF9 transformed GMPs, \xten{1}{5} cells were harvested from MethoCult cultures (section \ref{ch2:gmp-methocult}). Cells were washed in PBS, then resuspended in lysis buffer (10 mM Tris-HCl pH 7.4, 10 mM NaCl, 3 mM MgCl\textsubscript{2}, 0.1\% IGEPAL). Cells were centrifuged 500 RCF 10 min 4°C, then resuspended with 2.5μL Tn5 transposase (\#20034197, Illumina) in 25 \microl{} 2xTD buffer (\#20034197, Illumina) and 22.7 \microl{} \water{} and incubated at 37°C 30 min. Tagmentation reaction for embryonic populations was quenched with 1.1 \microl{} 500 mM EDTA, and supplemented with 10 \microl{} 50 mM MgCl\textsubscript{2}. Tagmentation reaction for MLL-AF9 GMPs was stopped by clean-up with a MinElute PCR Purification Kit (\#28004, Qiagen), according to manufacturer's instructions, with elution in 20 \microl{} 10 mM Tris-HCl pH 8.1. 20 \microl{} tagmented DNA was amplified and indexed by adding 25 \microl{} NEBNext Ultra II Q5 Master Mix (\#M0544S, NEB) + 2.5 \microl{} 25 \microm{} Universal adapter + 2.5 \microl{} 25 \microm{} custom index primer, then PCR amplified with the following cycling conditions: 72°C 5 min, 95°C 30 s, 8x cycles (98°C 10 s, 63°C 30 s, 72°C 1 min). PCR clean-up was performed using a MinElute PCR Purification Kit (\#28004, Qiagen), and eluted in 20 \microl{} \water{}. Library quality was assessed using a DNA 1000 high sensitivity Screen Tape (Agilent 2200 TapeStation system) and quantified by qRT-PCR (KAPA library quantification kit KK4828). Libraries were 75 bp paired-end sequenced on a NextSeq 500 (Illumina), or were 150 bp paired-end sequenced by Novogene on a NovaSeq 6000.
+
+\section{\label{ch2:multiome}RNA+ATAC multiome library preparation}
+Cells for RNA+ATAC multiome library preparation were acquired by S. Rice and N. Elliott (Roy lab) and nuclei isolated by A. Smith (Milne lab). Patient and donor samples are detailed in section \ref{ch4:multiome}, p.\pageref{ch4:multiome}. Patient and donor samples were prepared for sorting as previously described \citep{obyrne_discovery_2019}. Samples were stained with an a fetal bone marrow (FBM) and fetal liver (FL) antibody panel (Table \ref{tbl:ch2_multiome-fetal}), and ALL blast antibody panel (Table \ref{tbl:ch2_multiome-all}), and sorted using by FACS on a BD FACSAria Fusion. Cells were sorted for the following phenotypes: FL \& FBM CD34+ (Lin\uneg{}CD34\upos{}CD38\uneg{} and Lin\uneg{}CD34\upos{}CD38\upos{}); FL \& FBM CD34- (CD34\uneg{}); ALL blasts (CD19\upos{}). Samples were pooled in pairs, such that 1x male and 1x female sample were combined (Table \ref{tbl:ch4_multiome-samples}, p.\pageref{tbl:ch4_multiome-samples}).
+
+    \begin{table}[ht]
+    \caption{Antibody panel for sorting fetal bone marrow and liver donor cells.}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{}lllll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Conjugate} & \textbf{Dilution} & \textbf{Catalogue number} & \textbf{Company} \\ \midrule
+    CD10 & FITC & 1/20 & 11-0106-42 & Life Tech \\
+    CD90 & BV421 & 1/20 & 328122 & Biolegend \\
+    CD34 & Pecy7 & 1/50 & 25-0349-42 & Life Tech \\
+    CD45RA & APCef780 & 1/50 & 47-0458-42 & Life Tech \\
+    CD127 & PE & 1/50 & 12-1278-42 & Life Tech \\
+    CD123 & BV650 & 1/50 & 563405 & BD Bioscience \\
+    CD2 & PerCP-Cy5.5 & 1/50 & 300216 & Biolegend \\
+    CD3 & PerCP-Cy5.5 & 1/50 & 317336 & Biolegend \\
+    CD14 & PerCP-Cy5.5 & 1/50 & 301824 & Biolegend \\
+    CD16 & PerCP-Cy5.5 & 1/50 & 302028 & Biolegend \\
+    CD56 & PerCP-Cy5.5 & 1/50 & 318322 & Biolegend \\
+    CD235 & PerCP-Cy5.5 & 1/100 & 306614 & Biolegend \\
+    CD19 & APC & 1/100 & 302212 & Biolegend \\
+    CD38 & af700 & 1/100 & 56-0389-42 & Life Tech \\
+    Viability & ef506 & 1/200 & 65-0866-18 & Life Tech \\ \bottomrule
+    \end{tabular}
+    }
+    \label{tbl:ch2_multiome-fetal}
+    \end{table}
+
+    \begin{table}[ht]
+    \caption{Antibody panel for sorting ALL blast samples.}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{}lllll@{}}
+    \toprule
+    \textbf{Target} & \textbf{Conjugate} & \textbf{Dilution} & \textbf{Catalogue   number} & \textbf{Company} \\ \midrule
+    CD10 & FITC & 1/20 & 11-0106-42 & Life Tech \\
+    CD34 & PEcy7 & 1/50 & 25-0349-42 & Life Tech \\
+    CD2 & PerCP-Cy5.5 & 1/50 & 300216 & Biolegend \\
+    CD3 & PerCP-Cy5.5 & 1/50 & 317336 & Biolegend \\
+    CD14 & PerCP-Cy5.5 & 1/50 & 301824 & Biolegend \\
+    CD16 & PerCP-Cy5.5 & 1/50 & 302028 & Biolegend \\
+    CD56 & PerCP-Cy5.5 & 1/50 & 318322 & Biolegend \\
+    CD235a & PerCP-Cy5.5 & 1/100 & 306614 & Biolegend \\
+    CD19 & APC & 1/100 & 302212 & Biolegend \\
+    CD20 & ef450 & 1/100 & 48-0209-42 & Life Tech \\
+    CD38 & BV605 & 1/100 & 303532 & Biolegend \\
+    CD45 & AF700 & 1/100 & 56-9459-42 & Life Tech \\
+    CD133 & PE & 1/100 & 130-113-108 & Miltenyi \\
+    Viability & ef506 & 1/200 & 65-0866-18 & Life Tech \\ \bottomrule
+    \end{tabular}
+    }
+    \label{tbl:ch2_multiome-all}
+    \end{table}
+
+Nuclei were isolated from pooled samples according to the 10X Genomics nuclei isolation protocol (CG000365), using the Low Cell Input Nuclei Isolation method. Cells were centrifuged at 300 RCF 5 min 4°C and resuspended in 0.04\% BSA/PBS. \xten{4}{4} cells were taken and diluted to 50 \microl{} in 0.04\% BSA/PBS, then centrifuged at 300 RCF 5 min 4°C. The pellet was resuspended in lysis buffer (10 mM Tris-HCl pH 7.4, 10 mM NaCl, 3 mM MgCl\textsubscript{2}, 0.1\% Tween-20, 0.1\% IGEPAL, 0.01\% Digitonin (\#BN2006, Life technologies), 1\% BSA, 1 mM DTT, 1 U/\microl{} RNase inhibitor (Sigma)), and incubated for 3 min at 4°C. To stop lysis, 50 \microl{} wash buffer (10 mM Tris-HCl pH 7.4, 10 mM NaCl, 3 mM MgCl\textsubscript{2}, 1\% BSA, 0.1\% Tween-20, 1 mM DTT, 1 U/\microl{} RNase inhibitor (Sigma)) was added to samples, then centrifuged 500 RCF 5 min 4°C. Pellet was resuspended in 45 \microl{} diluted nuclei buffer (1X Nuclei Buffer (10x Genomics) with 1 mM DTT and 1 U/\microl{} RNase inhibitor (Sigma)), then centrifuged 500 RCF 5 min 4°C. Pellet was resuspended in 7 \microl{} diluted nuclei buffer. 2 \microl{} nuclei suspension was mixed with 8 \microl{} diluted nuclei buffer and 10 \microl{} Trypan Blue and counted with a haemocytometer to ensure sufficient nuclei quality and quantity. Multiome libraries were generated by an in-house facility (performed by Neil Ashley) following the Chromium Next GEM Single Cell Multiome ATAC + Gene Expression protocol (CG000338, 10X Genomics). Samples were 150 bp paired-end sequenced by Novogene on a NovaSeq 6000.
+
+\section{Computational analysis}
+
+\subsection{\label{ch2:rna-analysis}RNA-seq analysis}
+
+FASTQ files were quality checked using FastQC (v0.11.4) and trimmed using trim\_galore (v0.4.1) \citep{martin_cutadapt_2011}. Paired-end reads were mapped to mm9 (chapter \ref{chapter3_EHT}), hg19 (chapter \ref{chapter4_MA4}), or mm10 (chapter \ref{chapter5_normToLeuk}) reference genomes using STAR (v2.4.2) \citep{dobin_star_2013}. Reads mapping to ENCODE blacklisted regions \citep{amemiya_encode_2019} were discarded using BEDtools (v2.17.0) \citep{quinlan_bedtools_2010}. PCR duplicates were removed using Picard-tools MarkDuplicates (v1.83). Gene expression was quantified by counting mapped reads over exons using subread featureCounts (v1.6.2) \citep{liao_featurecounts_2014} and lowly expressed genes were discarded, to retain genes with > 3 counts per million (CPM) in at least 3 samples. Statistical analyses were performed in R \citep{r_core_team_r_2021} using the edgeR package \citep{robinson_edger:_2010}, with benjamini and hochberg multiple hypothesis correction. Statistical comparisons involved simple pairwise comparisons between two samples, or "ANOVA-like" analysis \citep{robinson_edger:_2010} to compare across all samples. Where blocking factors were used to remove the effect of unwanted variation (e.g. experimental batches), experimental design was modelled in edgeR as: model.matrix($\sim$sampleGroup + blockingFactor). Differentially expressed genes (DEGs) were defined as FDR $\leq$ 0.05. Gene expression correlations were calculated using Spearman's rank correlation in R.
+
+\subsection{\label{ch2:chip-atac-analysis}ChIP-seq and ATAC-seq analysis}
+
+FASTQ files were either processed using the NGseqBasic pipeline \citep{telenius_ngseqbasic_2018} as in chapters \ref{chapter3_EHT} and \ref{chapter4_MA4}, or with a custom pipeline as in chapter \ref{chapter5_normToLeuk}. FASTQ files were mapped to mm9 (chapter \ref{chapter3_EHT}), hg19 (chapter \ref{chapter4_MA4}), or mm10 (chapter \ref{chapter5_normToLeuk}) reference genomes. 
+
+For NGseqBasic pipeline, FASTQ files were quality checked using FastQC (v0.11.4) and mapped using Bowtie (v1.0.0) \citep{langmead_aligning_2010}. Unmapped reads were trimmed with trim\_galore (v0.3.1) \citep{martin_cutadapt_2011}, and short unmapped reads were combined using flash (v1.2.8) \citep{magoc_flash_2011} and subsequently remapped. PCR duplicates were removed using SAMtools rmdup (v0.1.19) \citep{li_sequence_2009}, and reads mapping to Duke blacklisted regions (UCSC) were discarded using BEDtools (v2.17.0) \citep{quinlan_bedtools_2010}. For custom pipeline, FASTQ files were quality checked using FastQC (v0.11.9) and mapped using bowtie2 (v2.4.5) \citep{langmead_fast_2012}. Reads mapping to ENCODE blacklisted regions \citep{amemiya_encode_2019} were discarded using BEDtools (v2.30.0) \citep{quinlan_bedtools_2010}. PCR duplicates were removed using deepTools alignmentSieve (v3.4.3) \citep{ramirez_deeptools2_2016}. For reference-normalised ChIP-seq, FASTQ reads were additionally mapped to the dm6 reference genome. hg19 read counts were adjusted based on the ratio of drosophila to human reads in input and IP control/treatment samples. 
+
+Tag (read) directories and bigWigs were made using HOMER (v4.7) \citep{heinz_simple_2010}, with counts normalised to tags per \xten{1}{7} tags, and visualised on the UCSC genome browser \citep{kent_human_2002}. For the purposes of visualisation, ATAC-seq and ChIPmentation replicates were merged prior to bigWig generation and normalisation. ChIP-seq peak calling was performed using HOMER findPeaks with input tracks for background correction. ATAC-seq peak calling was performed using MACS2 (v2.0.1/v2.2.7.1) \citep{zhang_model-based_2008} with parameters -BAMPE and -q 0.05. Note that MLL-AF4 peak calls were defined as MLL-N ChIP-seq peaks overlapped with AF4-C ChIP-seq peaks. Where peak call overlaps were performed, overlaps are defined as regions with at least 1 bp overlay. Called peaks were annotated to the nearest promoter using either HOMER annotatePeaks.pl (v4.7), or a custom approach (see section \ref{ch2:ma9-grn}). For ChIP-seq data, the nearest annotated gene is referred to as a "bound gene". Heatmaps and scatter plots profiling ChIP-seq and ATAC-seq profiles were made using deepTools (v3.4.3). 
+
+For statistical quantification of ATAC-seq data, robust peaks were first identified. Robust peaks are defined as elements where at least 2 samples are overlapping, such that peak calls in just one replicate are discarded. A union set of peaks was generated using the R package DiffBind dba.count, which normalises peak widths as a 400 bp window centred over the summit of ATAC-seq signal. Read counts were summarised across the union peak set, and lowly accessible peaks were discarded, to retain peaks with > 3 CPM in at least 3 samples. Statistical analyses were performed in R using the edgeR package \citep{robinson_edger:_2010}, with benjamini and hochberg multiple hypothesis correction. Statistical comparisons involved simple pairwise comparisons between two samples, or "ANOVA-like" analysis \citep{robinson_edger:_2010} to compare across all samples. Differentially accessible elements (DAEs) were defined as FDR $\leq$ 0.05. ATAC-seq and ChIP-seq correlations were calculated using Spearman's rank correlation in R.
+
+\subsection{\label{ch2:dimred}Dimensionality reduction methods}
+RNA-seq and ATAC-seq datasets throughout are dimensionally reduced using principal component analysis (PCA) and UMAP was performed using R \citep{r_core_team_r_2021}. RNA-seq and ATAC-seq input was first variance stabilised using DESeq2 vst \citep{love_moderated_2014}. PCA loading scores were also extracted, to represent genes that confer the greatest influence on principal components in PCA plots.
+
+\subsection{\label{ch2:single-cell}Single-cell sequencing analysis}
+
+Published single cell RNA-seq (scRNA-seq) of mouse and human EHT (Table \ref{tbl:ch2_public}, \cite{zeng_tracing_2019, zhu_developmental_2020}) was reanalysed in chapter \ref{chapter3_EHT}, and RNA+ATAC multiome data (generated as in section \ref{ch2:multiome}) was analysed in chapter \ref{chapter4_MA4}. EHT scRNA-seq was mapped to mm9, and RNA+ATAC multiome was mapped to hg19 reference genomes. For STRT-seq data, pre-processed expression tables were downloaded. For 10X genomics data, scRNA-seq was mapped using 10x Genomics Cell Ranger (v6.0.1) \citep{zheng_massively_2017}, and RNA+ATAC multiome was mapped using 10x Genomics Cell Ranger ARC (v2.0.0). scRNA-seq expression was pre-processed using the R package Seurat (v4.1.0) \citep{hao_integrated_2021}, and scATAC-seq accessibility was pre-processed using ArchR (v1.0.1) \citep{granja_archr_2021}.
+
+For RNA+ATAC multiome, samples were pooled in male-female pairs (section \ref{ch2:multiome}). To demultiplex cells, the souporcell pipeline \citep{heaton_souporcell_2020} was used to classify cells based on genotype, and ambiguously assigned classes were discarded. Gender identities were assigned to souporcell classifications by examining the number of \textit{XIST} transcripts and \% of reads mapped to the Y chromosome. Male samples were assigned as high Y chromosome mapping, and female as high \textit{XIST} expression (Appendix \ref{fig:app_multiome-qc}). Two samples pooled were both male (iALL3 and chALL, see Table \ref{tbl:ch4_multiome-samples}). For these samples, souporcell classifications were assigned by cross-referencing variant calls by souporcell with ATAC-seq and ChIP-seq datasets generated within the Milne lab (data not shown).
+
+EHT scRNA-seq cells were filtered as in their respective publications (\cite{zeng_tracing_2019} and \cite{zhu_developmental_2020}). RNA+ATAC multiome cells were filtered based on expression data by outlier detection using scater (v1.22.0) \citep{mccarthy_scater_2017}, and additionally retaining cells with the following parameters: read counts > 300 \& < 50000; detected features > 700 \& < 7000, \% mitochondrial reads < 20\% (Appendix \ref{fig:app_multiome-qc}). Cells were also filtered using the scATAC-seq data, to retain cells with a TSS enrichment score greater than 4 and greater than 1000 fragments. For all datasets, scRNA-seq expression was normalised and scaled using the SCTransform method in Seurat \citep{hafemeister_normalization_2019}, with variable regression on \% mitochondria, total read counts, and total detected features.
+
+scRNA-seq data was dimensionally reduced by PCA, followed by UMAP analysis. scATAC-seq data was dimensionally reduced by iterative latent semantic indexing (LSI, as used in \cite{granja_single-cell_2019, satpathy_massively_2019}), followed by UMAP analysis. For FBM and FL data, reciprocal PCA (RPCA) analysis was performed with Seurat to batch correct for donor identity. To integrate scRNA-seq and scATAC-seq datasets together, weighted nearest neighbour analysis (WNN, \cite{hao_integrated_2021}) was performed using Seurat FindMultiModalNeighbors (v4.1.0), with PCA and ILSI graphs as input. This WNN graph was used for WNN-UMAP analysis. Multimodal clusters were identified with Seurat, using WNN graphs as input. To label multimodal clusters, a scRNA-seq reference dataset was assembled by integrating and RPCA batch correcting published FBM and FL datasets (Table \ref{tbl:ch2_public}, \cite{popescu_decoding_2019, jardine_blood_2021, roy_transitions_2021}). Labels were transferred from this reference dataset to the multiome scRNA-seq dataset using Seurat commands FindTransferAnchors and TransferData. B-cell populations were manually annotated using gene expression as used in \cite{jardine_blood_2021} and \cite{suo_mapping_2022} (Appendix \ref{fig:app_multiome-lineage-markers}).
+
+\subsection{\label{ch2:pseudo}Pseudotime analysis}
+
+EHT scRNA-seq data was dimensionally reduced using either ForceAtlas2 (FA2) force directed graph \citep{jacomy_forceatlas2_2014}, or UMAP analysis. RNA+ATAC multiome data was dimensionally reduced using WNN UMAP analysis. The R package Slingshot \citep{street_slingshot_2018} was used to calculate pseudotime trajectories from UMAP and FA2 coordinates. The R package TradeSeq \citep{van_den_berge_trajectory-based_2020} with parameter k.knots = 7, was used to fit a model log\textsubscript{e} normalised expression as a function of pseudotime. Differential analysis was performed using TradeSeq associationTest to calculate genes that change in expression as pseudotime increases, with strength of significance represented by the wald statistic. Significantly associated genes were clustered by grouping gene expression data over 100 bins, and clustering with \textit{k}-means in R. AUCell algorithm \citep{aibar_scenic_2017} was used to calculate single-cell enrichment scores for TradeSeq derived gene expression clusters. scRNA-seq gene expression correlation was performed by first reducing noise using a moving average of gene expression over pseudotime (with a 20-cell averaging window), then Spearman's rank correlation using R. 
+
+\subsection{Pathway enrichment}
+
+For DEGs, enriched GO terms and reactome pathways were determined using PANTHER (v15) \citep{thomas_panther_2003}. For DAEs, enriched GO terms were determined using Genomic Regions Enrichment of Annotations Tool (GREAT) \citep{mclean_great_2010}. 
+
+
+\section{GRN construction and analysis}
+
+\subsection{\label{ch2:motifs}TF binding motif analysis}
+
+All motif analyses were performed using the MEME Suite (v5.4.1) \citep{bailey_meme_2015}, and input ATAC-seq peaks were reduced to a 200 bp window. TF binding motifs were downloaded from the HOCOMOCO database \citep{kulakovskiy_hocomoco_2018}, which included full and core databases. The core database included only higher confidence motif positional weight matrices (PWMs). For FIMO analysis used in GRN creation the core HOCOMOCO database was used, and was filtered for TF motifs associated with DEGs to restrict the size of the database. To perform TF binding motif enrichment using MEME AME \citep{mcleay_motif_2010}, motifs from the full HOCOMOCO database were used, using all accessible elements as the control peak set. TF binding motifs were detected within individual ATAC-seq peaks using MEME FIMO \citep{grant_fimo_2011}. 
+
+\subsection{\label{ch2:eht-grn}EHT GRN methodology}
+
+A GRN model of mouse EHT was established by integrating RNA-seq and ATAC-seq datasets. See Appendix \ref{fig:app_eht-workflow} for a flowchart overview of the steps. Enhancer-promoter (E-P) associations were predicted by annotating DAEs to the nearest DEG promoter, using HOMER (v4.7) annotatePeaks.pl \citep{heinz_simple_2010}, such that differential ATAC-seq peaks are linked with differential gene promoters. Pearson's correlation was calculated between ATAC-seq log\textsubscript{2} CPM of the DAE and RNA-seq log\textsubscript{2} CPM of the linked DEG, and E-P links were filtered for correlation greater than 0.4 or lower than -0.4. This correlation filter enriches for true enhancers or silencers, and increases the likelihood that the accessible element regulates the linked gene.
+
+To predict upstream regulators, TF binding motifs underlying each ATAC-seq peak were predicted using MEME FIMO \citep{grant_fimo_2011} and the core HOCOMOCO database \citep{kulakovskiy_hocomoco_2018}, as described in section \ref{ch2:motifs}. Only TF motifs corresponding with differentially expressed TFs were included. Presence of a TF motif implies a TF:target interaction via the E-P link. Predicted TF:target interactions were filtered based on RNA-seq log\textsubscript{2} CPM, retaining interactions with greater than 0.4 or lower than -0.4 correlation. Predicted E-P associations and motif analyses were integrated into a network format using the R package iGraph (v1.2.11). PCA gene loadings coordinates (section \ref{ch2:dimred}) were annotated to each GRN node and used to layout the network for visualisation purposes, such that the x axis describes PC1 (EHT progression), and the y axis describes PC2 (transient expression).
+
+\subsection{\label{ch2:ma4-grn}MLL-AF4 leukaemia GRN methodology}
+
+GRN models describing MLL-AF4 leukaemia were generated using ChIP-seq and nascent RNA-seq following gene siRNA KD. See Fig. \ref{fig:ch4_ma4-grn}A, p.\pageref{fig:ch4_ma4-grn} for an illustration of the methodology. Datasets sourced from published work are detailed in Table \ref{tbl:ch2_public}. GRNs were created to describe the regulatory impact of a specific factor: MLL-AF4 or RUNX1. This method involved four steps: 1). The regulatory scope of MLL-AF4 or RUNX1 was estimated using nascent RNA-seq following 96 hours' \textit{MLL-AF4} or \textit{RUNX1} KD. 2). It was assumed that individual TFs have both direct and indirect regulatory effects. Direct interactions were established using MLL-AF4 and RUNX1 ChIP-seq peak calls, which were annotated to the nearest expressed gene promoter using HOMER annotatePeaks.pl (v4.7). ChIP-seq peaks were additionally filtered for regions overlapping H3K27ac and H3K4me1 to enrich for enhancers. Genes annotated in this way were referred to as MLL-AF4 or RUNX1 "bound" genes. 3). To assign indirect interactions, a more general predicted TF interaction network was incorporated. This supplementary network was sourced from a FANTOM consortium EdgeExpressDB \citep{the_fantom_consortium_and_the_riken_omics_science_center_transcriptional_2009, severin_fantom4_2009}, which contains predicted TF interactions at gene promoters and was constructed using the THP-1 cell line. The R package GeneNetworkBuilder (v1.26.1) was used to assign predicted TF interactions from the FANTOM TF network to MLL-AF4/RUNX1 bound TFs, such that indirect regulation can be modelled (see Fig. \ref{fig:ch4_ma4-grn}A, p.\pageref{fig:ch4_ma4-grn} for a schematic representation). 4). Nodes of the network were then annotated using ALL and AML patient RNA-seq \citep{agraz-doblas_unraveling_2019, the_cancer_genome_atlas_research_network_genomic_2013, obyrne_discovery_2019}, CRISPR screens \citep{tzelepis_crispr_2016, behan_prioritization_2019}, and measures of centrality (section \ref{ch2:centrality}) 
+
+Patient expression data (Table \ref{tbl:ch2_public}, \cite{agraz-doblas_unraveling_2019, the_cancer_genome_atlas_research_network_genomic_2013, obyrne_discovery_2019}) was used to create sub-networks from the MLL-AF4 GRN model. DEGs from the MLL-AF4 siRNA KD nascent RNA-seq data were filtered for genes active in each RNA-seq patient sample. The expression threshold to define "active" genes was determined for each dataset separately, and was calculated as the mean expression value across all genes and samples (See Fig. \ref{fig:ch4_patient}B, p.\pageref{fig:ch4_patient} for expression histograms and thresholds). Note that median expression was not viable due to low sequencing depth in the FBM data. Node activity was further summarised as a binary matrix (individual samples x gene) and \textit{k}-means clustering was performed to identify patient GRN modules.
+
+\subsection{\label{ch2:ma9-grn}MLL-AF9 GMP leukaemogenesis GRN methodology}
+
+A GRN model of MLL-AF9 GMP leukaemogenesis was established by integration RNA-seq, ATAC-seq, and ChIPmentation datasets. See Appendix \ref{fig:app_methocult-workflow} for a flowchart overview of the steps. First, ATAC-seq peaks were filtered for those overlapping H3K27ac ChIPmentation peaks, to mark enhancer elements. E-P associations were predicted using a custom iterative peak calling approach (see Fig. \ref{fig:ch5_gmp-grn}A for an illustration). This involves 5 steps: 1). DAEs were linked to all expressed promoters in a 50 kb window. 2). Any enhancers that are sufficiently annotated (at least 3 promoter annotations) are "resolved." 3). The current window was expanded +10 kb either side, and unresolved elements re-annotated. 4). Steps 2 and 4 are repeated until all peaks are resolved, or the annotation window reaches 3 Mb. 5). Remaining unannotated peaks were assigned to the nearest expressed promoter. Pearson's correlation was calculated between ATAC-seq log\textsubscript{2} CPM of the DAE and RNA-seq log\textsubscript{2} CPM of linked DEGs, and E-P links were filtered for correlation greater than 0.4 or lower than -0.4. E-P links were further filtered using TAD domains from the HPC7 cell line \citep{pinto_do_o_expression_1998}. E-P links were retained where both the enhancer element and the associated promoter are within the same TAD.
+
+To predict upstream regulators, TF binding motifs underlying each ATAC-seq peak were predicted using MEME FIMO \citep{grant_fimo_2011} and the core HOCOMOCO database \citep{kulakovskiy_hocomoco_2018}, as described in section \ref{ch2:motifs}. Only TF motifs corresponding with differentially expressed TFs were included. Presence of a TF motif implies a TF:target interaction via the E-P link. MLL-N ChIPmentation data (representing MLL-AF9) was also integrated, to predict MLL-AF9 regulatory interactions. Predicted TF:target interactions were filtered based on RNA-seq log\textsubscript{2} CPM, retaining interactions with greater than 0.4 or lower than -0.4 correlation. Predicted E-P associations and motif analyses were integrated into a network format using the R package iGraph (v1.2.11). 
+
+\subsection{\label{ch2:centrality}Centrality calculation}
+
+Network degree and stress centralities were calculated using the R packages iGraph (v1.2.11) and sna (v2.4). Stress fold change (stress FC) was calculated in three steps: 1). in silico deletion of one GRN node at a time. 2). Recalculation of stress centrality for all other genes. 3). Calculation of fold change in stress centralities after node deletion. Mean stress FC was determined by averaging stress FC values across all genes other than the in silico deleted node.
+
+\subsection{\label{ch2:coint-methods}TF Co-interaction analysis}
+
+TF co-interaction is defined here as a pair of TFs that are predicted to interact at the same accessible elements in a network model, at a higher frequency than would be expected if TF interactions were random. For every pair of TFs (TFa and TFb), a contingency table summarising accessible elements targeted by TFa or TFb were extracted. A Fisher's exact test was performed comparing TFa elements and TFb elements, using all GRN elements as a background set, and giving a P-value and odds ratio. Odds ratio describes the likelihood that two TFa and TFb will target the same element. P-values were multiple-hypothesis corrected using the benjamini and hochberg method to generate FDR values. TFs not significant for any co-interaction were discarded (FDR > 0.05). Odds ratios were then clustered by hierarchical clustering in R. 
+
+\section{Statistics}
+
+Unless otherwise stated, statistical comparisons were performed using two-sided student's \textit{t}-test. For all box plot visualisations, midline indicates median, and upper and lower hinges indicate 1st and 3rd quartiles, respectively. Whiskers extend to furthest values within 1.5 times the interquartile range.
+
+\section{Sourcing of patient samples}
+ChIP-seq data generated in two MLL-AF4 patient samples were used in chapter \ref{chapter4_MA4}. MLL-AF4 patient sample \#1 is described in \cite{kerry_mll-af4_2017}. MLL-AF4 patient sample \#2 is a primary diagnostic bone marrow sample from a 6-year-old child with ALL, obtained from the Bloodwise Childhood Leukaemia Cell Bank, UK (REC: 16/SW/0219). Samples were anonymized at source, assigned a unique study number and linked.
+
+\section{\label{ch2:published}Sourcing of published datasets}
+
+Published datasets used in thesis are detailed in Table \ref{tbl:ch2_public}.
+
+    \begin{table}[ht]
+    \caption{Published datasets used in this thesis, detailing publication and GEO accession numbers.}
+    \resizebox{\textwidth}{!}{
+    \begin{tabular}{@{}llllll@{}}
+    \toprule
+    \textbf{Experiment} & \textbf{Cell line/tissue} & \textbf{Antibody} & \textbf{Treatment} & \textbf{Accession} & \textbf{Publication} \\ \midrule
+    Tiled capture-C & mESC diff. &  &  & GSE184490 & \citep{owens_dynamic_2022} \\
+    ChIP-seq & 416B & H3K27ac &  & GSE69776 & \citep{schutte_experimentally_2016} \\
+    ChIP-seq & 416B & Runx1 &  & GSE69776 & \citep{schutte_experimentally_2016} \\
+    ChIP-seq & SEM & MLL-N &  & GSE74812 & \citep{kerry_mll-af4_2017} \\
+    ChIP-seq & SEM & AF4-C &  & GSE74812 & \citep{kerry_mll-af4_2017} \\
+    ChIP-seq & SEM & RUNX1 &  & GSE42075 & \citep{wilkinson_runx1_2013} \\
+    ChIP-seq & SEM & Input &  & GSE42075 & \citep{wilkinson_runx1_2013} \\
+    ChIP-seq & SEM & ELF1 &  & GSE117865 & \citep{godfrey_dot1l_2019} \\
+    ChIP-seq & SEM & H3K79me3 &  & GSE117865 & \citep{godfrey_dot1l_2019} \\
+    ChIP-seq & SEM & BRD4 &  & GSE83671 & \citep{kerry_mll-af4_2017} \\
+    ChIP-seq & SEM & H3K27ac &  & GSE74812 & \citep{kerry_mll-af4_2017} \\
+    ChIP-seq & SEM & MYB &  & GSE117865 & \citep{godfrey_dot1l_2019} \\
+    ChIP-seq & SEM & ERG &  & GSE117865 & \citep{godfrey_dot1l_2019} \\
+    ChIP-seq & Primograft & KMT2A-N &  & GSE83671 & \citep{kerry_mll-af4_2017} \\
+    ChIP-seq & Primograft & AFF1-C &  & GSE83671 & \citep{kerry_mll-af4_2017} \\
+    ATAC-seq & SEM &  &  & GSE74812 & \citep{kerry_mll-af4_2017} \\
+    Nascent   RNA-seq & SEM &  & MLL-AF4 KD & GSE85988 & \citep{godfrey_mll-af4_2017} \\
+    Nascent   RNA-seq & SEM &  & EPZ-5676 & GSE83671 & \citep{kerry_mll-af4_2017} \\
+    Nascent   RNA-seq & SEM &  & IBET & GSE139437 & \citep{crump_bet_2021} \\
+    10x scRNA-seq & Mouse EHT &  &  & GSE135202 & \citep{zhu_developmental_2020} \\
+    STRT-seq & Human EHT &  &  & GSE137117 & \citep{zeng_tracing_2019} \\ 
+    10x scRNA-seq & FL &  &  & E-MTAB-7407 & \citep{popescu_decoding_2019} \\
+    10x scRNA-seq & FBM &  &  & GSE166895 & \citep{jardine_blood_2021} \\
+    10x scRNA-seq & FL \& FBM &  &  & GSE155259 & \citep{roy_transitions_2021} \\
+    RNA-seq & MLLr ALL &  &  & PRJEB23605 & \citep{agraz-doblas_unraveling_2019} \\
+    RNA-seq & AML &  &  & NA & \citep{the_cancer_genome_atlas_research_network_genomic_2013} \\
+    RNA-seq & FBM &  &  & GSE122982 & \citep{obyrne_discovery_2019} \\ \bottomrule
+    \end{tabular}
+    }
+    \label{tbl:ch2_public}
+    \end{table}
+    
+
+
+
+
+
+
